@@ -83,11 +83,13 @@ public class C03_WindowHandles {
         String expectedTitle2 = "New Window";
         String actualTitle2 = driver.getTitle();
         Assert.assertEquals(expectedTitle2, actualTitle2);
+
         //● Sayfadaki textin “New Window” olduğunu doğrulayın.
         WebElement ikinciSayfaYaziElemnti = driver.findElement(By.xpath("//h3"));
         String expectedIkinciYazi = "New Window";
         String actualIkinciyazi = ikinciSayfaYaziElemnti.getText();
         Assert.assertEquals(expectedIkinciYazi, actualIkinciyazi);
+
         //● Bir önceki pencereye geri döndükten sonra sayfa başlığının
         // “The Internet” olduğunu doğrulayın.
         driver.switchTo().window(ilkSayfaninWindowhandleDegeri);
